@@ -79,3 +79,427 @@
 // } else {
 //   alert("Я вас не знаю");
 // }
+// 36--------
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+// const playTimes = Object.values(players)
+// const totalAveragePlaytimePerGame = players.reduce((acc, value) => {
+//   console.log(value.playtime);
+//  return acc + value.playtime / value.gamesPlayed
+// }, 0);
+
+// 47----
+
+// const users = [
+//     {
+//       name: "Moore Hensley",
+//       email: "moorehensley@indexia.com",
+//       eyeColor: "blue",
+//       friends: ["Sharron Pace"],
+//       isActive: false,
+//       balance: 2811,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sharlene Bush",
+//       email: "sharlenebush@tubesys.com",
+//       eyeColor: "blue",
+//       friends: ["Briana Decker", "Sharron Pace"],
+//       isActive: true,
+//       balance: 3821,
+//       gender: "female"
+//     },
+//     {
+//       name: "Ross Vazquez",
+//       email: "rossvazquez@xinware.com",
+//       eyeColor: "green",
+//       friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//       isActive: false,
+//       balance: 3793,
+//       gender: "male"
+//     },
+//     {
+//       name: "Elma Head",
+//       email: "elmahead@omatom.com",
+//       eyeColor: "green",
+//       friends: ["Goldie Gentry", "Aisha Tran"],
+//       isActive: true,
+//       balance: 2278,
+//       gender: "female"
+//     },
+//     {
+//       name: "Carey Barr",
+//       email: "careybarr@nurali.com",
+//       eyeColor: "blue",
+//       friends: ["Jordan Sampson", "Eddie Strong"],
+//       isActive: true,
+//       balance: 3951,
+//       gender: "male"
+//     },
+//     {
+//       name: "Blackburn Dotson",
+//       email: "blackburndotson@furnigeer.com",
+//       eyeColor: "brown",
+//       friends: ["Jacklyn Lucas", "Linda Chapman"],
+//       isActive: false,
+//       balance: 1498,
+//       gender: "male"
+//     },
+//     {
+//       name: "Sheree Anthony",
+//       email: "shereeanthony@kog.com",
+//       eyeColor: "brown",
+//       friends: ["Goldie Gentry", "Briana Decker"],
+//       isActive: true,
+//       balance: 2764,
+//       gender: "female"
+//     }
+//   ]
+
+
+//   const getSortedFriends = users => 
+//   [...users]
+//   .flatMap(user => user.friends)
+//   .filter((friend, index, array) => array.indexOf(friend) === index)
+//   .sort((a, b) => a.localeCompare(b));
+  
+  
+//  console.log(getSortedFriends(users));
+
+// const getSortedFriends = users => 
+// [...users]
+// .flatMap(user => user.friends)
+// .filter((friend, index, array) => array.indexOf(friend) === index)
+// .sort((a, b) => a.friends.localeCompare(b.friends));
+
+
+
+
+
+
+// const getTotalFriendCount = users => 
+// users.reduce((total, user) => total + user.friends.length, 0);
+
+// console.log(getTotalFriendCount(users));
+
+
+// 41
+// const books = [
+//     {
+//       title: "The Last Kingdom",
+//       author: "Bernard Cornwell",
+//       rating: 8.38,
+//     },
+//     {
+//       title: "Beside Still Waters",
+//       author: "Robert Sheckley",
+//       rating: 8.51,
+//     },
+//     {
+//       title: "The Dream of a Ridiculous Man",
+//       author: "Fyodor Dostoevsky",
+//       rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+//   ];
+
+//   const sortedByAuthorName = [...books].sort((firstBook, secondBook) => firstBook.author.localeCompare(secondBook.author));
+
+//   const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) => secondBook.author.localeCompare(firstBook.author));
+  
+//   const sortedByAscendingRating = [...books].sort((firstBook, secondBook) => firstBook.rating - secondBook.rating);
+  
+//   const sortedByDescentingRating = [...books].sort((firstBook, secondBook) => secondBook.rating - firstBook.rating);
+  
+  
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+
+// 45---
+// const books = [
+//     {
+//       title: "The Last Kingdom",
+//       author: "Bernard Cornwell",
+//       rating: 8.38,
+//     },
+//     {
+//       title: "Beside Still Waters",
+//       author: "Robert Sheckley",
+//       rating: 8.51,
+//     },
+//     {
+//       title: "The Dream of a Ridiculous Man",
+//       author: "Fyodor Dostoevsky",
+//       rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     {
+//       title: "The Dreams in the Witch House",
+//       author: "Howard Lovecraft",
+//       rating: 8.67,
+//     },
+//   ];
+//   const MIN_BOOK_RATING = 8;
+//   // Change code below this line
+  
+//   const names = books
+//     .filter(book => book.rating >= MIN_BOOK_RATING)
+//     .sort((firstBook, secondBook) => firstBook.author.localeCompare(secondBook.author))
+//     .map(book => book.author)
+
+//   console.log(names);
+
+
+//6. Напишите функцию each(array, callback), которая
+//первым параметром принимает массив, а вторым - функцию,
+//которая применится к каждому элементу массива.
+//Функция each должна вернуть новый массив, элементами
+//которого будут результаты вызова callback
+//callback функци должна умножать элементы на 2
+
+// const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
+// function each (array, callback) {
+//     // const newArray = []
+//     // for (let i = 0; i < array.length; i++) {
+//     //     newArray.push(callback(array[i]))
+//     // }
+//     // // console.log(newArray);
+
+
+//     return array.map(callback)
+// }
+
+// function multiply (el) {
+//  return el * 2
+// }
+
+// each (numbers, multiply)
+// console.log(each (numbers, multiply));
+
+// 3. Напиши класс User
+//со свойствами login email
+//Объяви приватные свойства #login #email,
+//доступ к которым сделай через геттер и сеттер
+
+
+
+// class User {
+//     #login;
+//     #email;
+//     constructor(login, email) {
+//         this.#login = login
+//         this.#email = email
+//     }
+//     get getUser() {
+//         return {
+//             login: this.#login,
+//             email: this.#email,
+//         }
+//     }
+//     set setlogin (newLogin) {
+//         this.#login =  newLogin
+//     }
+//     set setEmail(newEmail) {
+//         this.#email = newEmail
+//     }
+// }
+
+// const client = new User("asd", "фффф")
+// console.log(client);
+// console.log(client.getUser.login);
+// client.setlogin = `oleg`
+// console.log(client);
+
+// Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
+// Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку елемента (тегу <h2>) і кількість елементів в категорії (усіх <li>, вкладених в нього).
+// В результаті, в консолі будуть виведені наступні повідомлення.
+
+// Number of categories: 3
+
+// Category: Animals
+// Elements: 4
+
+// Category: Products
+// Elements: 3
+
+// Category: Technologies
+// Elements: 5
+
+// const categories = document.querySelectorAll(`.item`)
+// console.log(`Number of categories: ${categories.length}`);
+
+
+
+
+// ----------------
+// class StringBuilder {
+//     constructor (initialValue) {
+//       this.value = initialValue;
+//     }
+//     getValue() {
+//       return this.value;
+//     }
+//     padEnd(str) {
+//       this.value.push(str)
+//     }
+//     padStart(str) {
+//       this.value.unshift(str)
+//     }
+//     padBoth(str) {
+//       this.value.push(str) || this.value.unshift()
+//     }
+//   }
+  
+  
+//   // Change code above this line
+//   const builder = new StringBuilder(".");
+//   console.log(builder.getValue()); // "."
+//   builder.padStart("^");
+//   console.log(builder.getValue()); // "^."
+//   builder.padEnd("^");
+//   console.log(builder.getValue()); // "^.^"
+//   builder.padBoth("=");
+//   console.log(builder.getValue()); // "=^.^="
+  
+
+
+
+
+
+
+
+
+
+
+// -------------------
+// function slugify(title) {
+//   slug = title.toLowerCase().split(" ").join('-');
+//   console.log(slug);
+//   return slug;
+// }
+
+// slugify('How to become a JUNIOR developer for TWO WEEKS')
+
+// console.log(slug);
+
+
+
+
+
+
+
+
+
+// -------------
+
+
+// const products = [
+//     { name: "Radar", price: 1300, quantity: 4 },
+//     { name: "Scanner", price: 2700, quantity: 3 },
+//     { name: "Droid", price: 400, quantity: 7 },
+//     { name: "Grip", price: 1200, quantity: 9 },
+//   ];
+  
+//   // function getAllPropValues(propName) {
+//   //   const allPropValues = [];
+  
+//   //   for (const product of products) {
+//   //     if (product.hasOwnProperty(propName)) {
+//   //       allPropValues.push(product[propName]);
+//   //     }
+//   //   }
+//   //   return allPropValues;
+//   // }
+  
+//   function getAllPropValues(propName) {
+//     // Change code below this line
+//   for (let product of products) {
+//     const productProps = Object.keys(product)
+//     // console.log(productProps);
+
+//     for (const prop of productProps) {
+//         console.log(prop);
+//           if (prop === propName) {
+//         //   return Object.values(propName)
+//         }
+//     }
+//   }
+  
+  
+//     // Change code above this line
+//   }
+  
+
+//   getAllPropValues("quantity")
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//      for (const potion of this.potions) {
+//        if (potion.name === newPotion.name) {
+//                return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//        }
+//      }
+ 
+
+//    this.potions.push(newPotion);
+//     },
+//  removePotion(potionName) {
+// for (let i = 0; i < this.potions.length; i += 1) {
+//   const potion = this.potions[i];
+//   if (potion.name === potionName) {
+//     this.potions.splice(i, 1);
+//     return;
+//   }
+// }
+
+//    return `Potion ${potionName} is not in inventory!`;
+//     },
+//   updatePotionName(oldName, newName) {
+//   for (let i = 0; i < this.potions.length; i += 1) {
+//       const potion = this.potions[i];
+//       console.log(potion);
+//       if (potion.name === oldName) {
+//           potion.name = newName;
+//           return;
+        
+//       }
+    
+//       }
+//       return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
+
+// atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+
+// -------------------13b4
+
+// const changeEven = (numbers, value) => {
+//   let newArray = []
+//   numbers.forEach((number)=>{if (number % 2 === 0) {
+//     newArray.push(number + value)
+//   } else newArray.push(number)
+// })
+//   return newArray
+// }
+
+// changeEven([1, 2, 3, 4, 5], 10)
+
